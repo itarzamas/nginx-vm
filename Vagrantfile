@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
   # do NOT download the iso file from a webserver
   config.vbguest.no_remote = true
 
-  config.vm.box = "maier/alpine-3.4-x86_64"
+  config.vm.box = "generic/alpine310"
 
   config.vm.define "node" do |node|
     node.vm.provider "virtualbox" do |v|
@@ -30,8 +30,10 @@ Vagrant.configure("2") do |config|
     # these functions are all defined in 'scripts.rb'
     node.vm.provision :shell, inline:
       install_nginx() +
+      install_mc() +
       setup_conf_files() +
       start_nginx()
+
   end
 
 end

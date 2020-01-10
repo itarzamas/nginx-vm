@@ -1,5 +1,5 @@
 # nginx-vm
-Nginx on {Alpine 3.4, VirtualBox, Vagrant}
+Nginx on {Alpine 3.10, VirtualBox, Vagrant}
 
 ### Disclaimer
 
@@ -9,7 +9,7 @@ Host: Ubuntu ``16.04 Server``
 
 Vagrant ``1.8.1``
 
-VirtualBox ``5.0``
+VirtualBox ``5.2``
 
 ### Prereqs
 

@@ -5,6 +5,13 @@ mkdir -p /tmp/nginx/client-body
 SCRIPT
     return $script
 end
+def install_mc()
+    $script = <<SCRIPT
+apk add --update mc && rm -rf /var/cache/apk/*
+
+SCRIPT
+    return $script
+end
 
 def setup_conf_files()
     $script = <<SCRIPT
